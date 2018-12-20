@@ -1,0 +1,7 @@
+Mizu here! Using the repo is super easy, but it can get a little confusing. Here's how it works:
+Anything you put in the folder associated with the repo can be added to the main folder of the game. 
+Start by making a github account: 
+https://github.com/
+After, either me or Irlana can add you to the repo.
+I suggest downloading github desktop: https://desktop.github.com
+But you can do it through your browser. 
