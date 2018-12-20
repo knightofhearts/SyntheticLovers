@@ -2,6 +2,20 @@ Mizu here! Using the repo is super easy, but it can get a little confusing. Here
 Anything you put in the folder associated with the repo can be added to the main folder of the game. 
 Start by making a github account: 
 https://github.com/
+
 After, either me or Irlana can add you to the repo.
 I suggest downloading github desktop: https://desktop.github.com
-But you can do it through your browser. 
+
+But you can do it through your browser. On brower, you will constantly have to re-download files you want to change like 
+script/code. If you have github desktop, whenever you make any changes to the folder, you can upload it to the repo. You can 
+also PULL, which will change all the files to the most current copy.
+
+ON BROWSER:
+Simply click on upload file and add your stuff where ever you want on the repo. 
+
+ON DESKTOP:
+You need to COMMIT your changes, and then PUSH them. (You'll have to PULL to get the latest update before commiting/pushing.)
+Think of COMMITING as getting engaged and PUSHING as having the wedding. Comitting will save your changes, but won't
+make it official. Pushing makes it totally offical and everyone will have it. 
+
+If you have any more questions, ask me!
