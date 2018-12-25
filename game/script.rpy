@@ -68,11 +68,15 @@ label start:
     show b_gj puzzled
     n "The bright glare of a sign saying 'Dollhouse' gives him pause."
     show b_gj worried
+    $layer_move("forward", 1000, duration=1000, warper='ease')
+    $camera_move(-50, -50, 100, 0, 1, warper='ease')
     n "The man shivers as he repeatedly glances up and down the street."
     n "Once he's assured himself he's alone, he head towards the entrance."
+    show b_gj worried at move_right
     n "He pushes open the door, casting a final look over his shoulder before it closes behind him."
     scene bg dollhouse inside with fade
-    show b_gj neutral reg at right
+    $ camera_reset()
+    show b_gj neutral reg at center
     n "The man finds himself in a long hallway all in white."
     n "A contemporary lighting illuminates the sleek but empty-looking room."
     n "In the middle of the room appears to be a counter with no one behind it."
@@ -139,12 +143,15 @@ label start:
     n "The man pounds on the controls until everything disappears."
     $no_box = False
     hide cg_three
-    show b_gj bored cros at right
+    show b_gj bored cros at center
     voice c5
     c "Please proceed through the doors ahead of you."
     $no_box = True
+    $camera_move(1.2, .4, 600, 0, 1, warper='ease')
     n "A set of doors swings open on the other side of the counter, revealing another hallway."
-    show b_gj bored reg
+    $camera_reset()
+    pause(.5)
+    show b_gj bored reg at move_right
     n "The man steps away from the counter and makes his way through the open doors."
     scene black
     n "Down the hallway, a multitude of doors lines the walls. Each door is illuminated in a red light, except for one."
@@ -180,34 +187,37 @@ label start:
     voice m9
     m "I'm Unit 532 and I will serve you tonight."
     voice m10
+    show b_gj puzzled
     m "Your selected Dominating Lover programming will now initialize."
     voice b18
     b "Wait, what? Programming?"
     $no_box = True
+    show b_gj puzzled at move_center
     n "The man springs off the bed, backing away from the escort."
     $no_box = False
     voice b19
+    show b_gj scared
     b "Y-you're a biot?"
     voice m11
     m "That's Master Biot to you. Now strip and get on the bed."
     voice b20
     b "What in the fuck?"
     $no_box = True
+    show b_gj puzzled
     n "The escort raises an eyebrow."
     $no_box = False
     voice m12
-    voice m12
+    show b_gj scared
     m "I. Said. Strip."
     n "The man stares at him in wide-eyed shock, backing up away from the escort."
     voice m13
-    voice m13
     m "Tsk, tsk, tsk."
     $no_box = True
+    show cg_four with fade
     n "The escort suddenly pins the man to the wall."
     n "He plants his knee firmly between the man's legs."
     $no_box = False
     voice m14
-    voice m15
     m "Do you think playing dumb will make me let you off easy?"
     voice b21
     b "Fuck off, you stupid machine!"
@@ -221,29 +231,43 @@ label start:
     $no_box = True
     n "Growing more desperate to get the surprisingly strong escort off him, the man drops the device."
     n "The device starts emitting a strange clicking noise."
+    show b_gj scared at right
+    show m_bo smirk reg at mostly_right
+    hide cg_four
     $no_box = False
     voice m16
+    show b_gj surprise
     m "Oh? What have you dropped, you naughty boy?"
     $no_box = True
+    show m_bo sus reg
     n "The escort reaches down to pick up the device."
+    show m_bo confused reg
     n "As soon as his hand makes contact, the clicking noise stops."
     $no_box = False
-    voice m17
+    voice b23
+    show b_gj scared
+    show m_bo sus reg
     b "Shit!"
     $no_box = True
+    show b_gj scared at mostly_right
+    show m_bo tired at quick_move
     n "The escort goes limp. Seeing his chance, the man shoves him away, sending the biot stumbling backwards."
     n "Suddenly the quiet of the room explodes with sirens wailing through hidden speakers."
     $no_box = False
     voice c6
+    show m_bo pain_1
     c "ALERT! ALERT! ATTEMPTED BIOT TAMPERING DETECTED! SECURITY HAS BEEN DISPATCHED!"
     $no_box = True
+    show b_gj surprise
     n "The escort doubles over as if the noise is unbearable."
     $no_box = False
     voice m17
+    show b_gj scared
     m "Nngh!"
-    voice b23
+    voice b24
     b "Goddammit!"
     $no_box = True
+    show cg_five with fade
     n "The man yanks off his jacket and wraps it around his hand to punch out the window. Something flat and round falls out of one of the pockets within an arm's length of the escort."
     n "The ongoing siren masks the sound of shattering glass."
     n "With great struggle, the escort lifts his head to watch the man disappear into the night."
@@ -254,6 +278,7 @@ label start:
 
 #### Scene Two ####
     $no_box = False
+    scene black with fade
     w "There has been a new development."
     w "..."
     w "Our reports say that the stolen asset has been activated at an adult entertainment center in the 3rd district. The establishment is called Dollhouse. Investigate immediately. We need to recover our property."

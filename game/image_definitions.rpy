@@ -14,12 +14,18 @@ transform mostly_right:
     xpos 0.8 xanchor 1.0 ypos 1.0 yanchor 1.0
 transform all_right:
     xpos 1.2 xanchor 1.0 ypos 1.0 yanchor 1.0
+transform move_right:
+    linear 1.0 xpos 1.5
+transform move_center:
+    linear 1.0 xpos .5
+transform quick_move:
+    linear .3 xpos .5
 
 image cg_one = "CGS/dollhouse_interface_blank.jpg"
 image cg_two = "CGS/dollhouse_interface_model.png"
 image cg_three = "CGS/dollhouse_interface_thanks.jpg"
-image cg_four = "CGS/CG_mconthefloor.png"
-image cg_five = "CGS/CG_wallpin.png"
+image cg_four = "CGS/CG_wallpin.png"
+image cg_five = "CGS/CG_mconthefloor.png"
 
 #### MC Black Outfit #######
 
@@ -39,7 +45,7 @@ image m_bo smirk reg = "sprites/MC/ian_smirk_blackoutfit_armssides.png"
 image m_bo smirk cros = "sprites/MC/ian_smirk_blackoutfit_armswaist.png"
 image m_bo sus reg = "sprites/MC/ian_suspicious_blackoutfit_armssides.png"
 image m_bo sus cros = "sprites/MC/ian_suspicious_blackoutfit_armswaist.png"
-image m_bo tired = "sprites/MC/ian_suspicious_blackoutfit_armswaist.png"
+image m_bo tired = "sprites/MC/ian_tired_blackoutfit_armssides.png"
 
 #### MS Topless #######
 
@@ -62,7 +68,7 @@ image b_gj happy cros = "sprites/Bastian/bastian_happy_green_jacket_armscrossed.
 image b_gj neutral reg = "sprites/Bastian/bastian_neutral_green_jacket_regular.png"
 image b_gj neutral cros = "sprites/Bastian/bastian_neutral_green_jacket_arms_crossed.png"
 image b_gj puzzled = "sprites/Bastian/bastian_puzzled_green_jacket_regular.png"
-image b_gj scared = "sprites/Bastian/bastian_bastian_scared_green_jacket_regular.png"
+image b_gj scared = "sprites/Bastian/bastian_scared_green_jacket_regular.png"
 image b_gj smirk = "sprites/Bastian/bastian_smirk_green_jacket_regular.png"
 image b_gj surprise = "sprites/Bastian/bastian_surprized_green_jacket_regular.png"
 image b_gj worried = "sprites/Bastian/bastian_worried_green_jacket_regular.png"

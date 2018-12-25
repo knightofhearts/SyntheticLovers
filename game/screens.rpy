@@ -429,7 +429,7 @@ screen main_menu():
         hotspot (1377, 682, 302, 67) action ShowMenu ("cg")
         hotspot (1374, 753, 190, 60) action Quit(confirm=not main_menu)
 
-
+    
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
 
