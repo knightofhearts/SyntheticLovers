@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/image_definitions.rpy", line 13: expected ':' not found.
+    transform mostly_right = xpos 1880
+                           ^
+
+Ren'Py Version: Ren'Py 7.1.3.1092
+Sun Dec 23 13:23:48 2018

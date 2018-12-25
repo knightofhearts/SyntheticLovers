@@ -115,7 +115,7 @@ define config.window = "auto"
 
 define config.window_show_transition = Dissolve(.2)
 define config.window_hide_transition = Dissolve(.2)
-
+define config.layers = [ 'background', 'master', 'transient', 'screens', 'overlay', 'cgs' ]
 
 ## Preference defaults #########################################################
 
