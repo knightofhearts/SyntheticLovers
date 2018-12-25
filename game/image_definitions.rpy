@@ -1,5 +1,5 @@
-######### IMAGE DEFINITIONS #########################
-## This is to define new ibages. We can give theb nabes, ect for easy use in the script. Placing it here declutters the bain script!
+######### DEFINITIONS #########################
+## This is to define Things. We can give them names, ect for easy use in the script. Placing it here declutters the main script!
 
 define persistent.cg1 = False
 define persistent.cg2 = False
@@ -83,7 +83,15 @@ image r puzzled = "sprites/Riko/riko_puzzled.png"
 image r puzzled_2 = "sprites/Riko/riko_puzzled2.png"
 image r satisfied = "sprites/Riko/riko_satisfied.png"
 image r surprised = "sprites/Riko/riko_surprized.png"
-
+### Sounds #####################
+define rain = "audio/sfx/scene 1/rain-light-on-street.ogg"
+define door = "audio/sfx/scene 1/door-sliding.ogg"
+define echo = "audio/sfx/scene 1/steps-on-a-concrete-floor-short-echo.WAV"
+define ticking = "audio/sfx/scene 1/ticking-synth.WAV"
+define footsteps = "audio/sfx/scene 1/steps-on-a-concrete-floor-short.ogg"
+define alarm = "audio/sfx/scene 1/alert-futuristic-alarm.ogg"
+define touchscreen = "audio/sfx/scene 1/touchscreen-keyboard-short.ogg"
+define glass_break = "audio/sfx/scene 1/window-breaking-glass.ogg"
 
 ### Voice Lines for Others #####
 define c1 = "audio/voice_lines/Computer/Comp_DH_01_Dollhouse.ogg"

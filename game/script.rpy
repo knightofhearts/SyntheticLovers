@@ -62,6 +62,7 @@ label start:
     m "After all... What else is there for a biot than to fulfill their primary function?"
     window hide
     $no_box = True
+    play music rain
     scene bg dollhouse outside rain
     show b_gj worried at left
     n "A man in the shadows hurries down a deserted street in the rain."
@@ -69,14 +70,16 @@ label start:
     n "The bright glare of a sign saying 'Dollhouse' gives him pause."
     show b_gj worried
     $layer_move("forward", 1000, duration=1000, warper='ease')
-    $camera_move(-50, -50, 100, 0, 1, warper='ease')
+    $camera_move(0, 0, 100, 0, 1, warper='ease')
     n "The man shivers as he repeatedly glances up and down the street."
     n "Once he's assured himself he's alone, he head towards the entrance."
     show b_gj worried at move_right
     n "He pushes open the door, casting a final look over his shoulder before it closes behind him."
+    stop music fadeout 1.0
     scene bg dollhouse inside with fade
     $ camera_reset()
     show b_gj neutral reg at center
+    play sound echo
     n "The man finds himself in a long hallway all in white."
     n "A contemporary lighting illuminates the sleek but empty-looking room."
     n "In the middle of the room appears to be a counter with no one behind it."
@@ -110,6 +113,7 @@ label start:
     $no_box = False
     voice b9
     show b_gj puzzled
+    play sound touchscreen
     b "K, so how do I get this thing to work?"
     $no_box = True
     show b_gj annoyed
@@ -143,19 +147,22 @@ label start:
     n "The man pounds on the controls until everything disappears."
     $no_box = False
     hide cg_three
-    show b_gj bored cros at center
+    show b_gj bored cros at right
     voice c5
     c "Please proceed through the doors ahead of you."
     $no_box = True
     $camera_move(1.2, .4, 600, 0, 1, warper='ease')
+    play sound door
     n "A set of doors swings open on the other side of the counter, revealing another hallway."
     $camera_reset()
     pause(.5)
     show b_gj bored reg at move_right
+    play sound footsteps
     n "The man steps away from the counter and makes his way through the open doors."
     scene black
     n "Down the hallway, a multitude of doors lines the walls. Each door is illuminated in a red light, except for one."
     n "A blue light shines on a single door."
+    play sound footsteps
     n "The man walks up to the door, which automatically opens to his presence."
     scene bg dollhouse outside_hotelroom
     n "The inside is sparsely furnished, containing only a bed and a nightstand. There is one window in the room and two other doors, a more narrow one on the right, the other to the left."
@@ -170,6 +177,7 @@ label start:
     b "Wish I could enjoy it..."
     hide b_gj bored reg
     $no_box = True
+    play sound touchscreen
     n "Sitting up on the bed, the man takes out his comm device and taps out a message before frowning."
     n "He returns his comm to his pocket and pulls out a strange metallic device."
     n "To him, it looks like an unstable wad of metal and circuitry only held together by duct tape, dreams, and some brand of mad ingenuity."
@@ -198,12 +206,15 @@ label start:
     voice b19
     show b_gj scared
     b "Y-you're a biot?"
+    show m_bo annoyed ros
     voice m11
     m "That's Master Biot to you. Now strip and get on the bed."
     voice b20
+    show m_bo annoyed reg
     b "What in the fuck?"
     $no_box = True
     show b_gj puzzled
+    show m_bo smirk cros
     n "The escort raises an eyebrow."
     $no_box = False
     voice m12
@@ -211,6 +222,7 @@ label start:
     m "I. Said. Strip."
     n "The man stares at him in wide-eyed shock, backing up away from the escort."
     voice m13
+    show m_bo smirk reg
     m "Tsk, tsk, tsk."
     $no_box = True
     show cg_four with fade
@@ -229,6 +241,7 @@ label start:
     voice b22
     b "Like hell!"
     $no_box = True
+    play music ticking
     n "Growing more desperate to get the surprisingly strong escort off him, the man drops the device."
     n "The device starts emitting a strange clicking noise."
     show b_gj scared at right
@@ -242,6 +255,7 @@ label start:
     show m_bo sus reg
     n "The escort reaches down to pick up the device."
     show m_bo confused reg
+    stop music
     n "As soon as his hand makes contact, the clicking noise stops."
     $no_box = False
     voice b23
@@ -256,6 +270,7 @@ label start:
     $no_box = False
     voice c6
     show m_bo pain_1
+    play music alarm
     c "ALERT! ALERT! ATTEMPTED BIOT TAMPERING DETECTED! SECURITY HAS BEEN DISPATCHED!"
     $no_box = True
     show b_gj surprise
@@ -268,14 +283,16 @@ label start:
     b "Goddammit!"
     $no_box = True
     show cg_five with fade
+    play sound glass_break
     n "The man yanks off his jacket and wraps it around his hand to punch out the window. Something flat and round falls out of one of the pockets within an arm's length of the escort."
     n "The ongoing siren masks the sound of shattering glass."
     n "With great struggle, the escort lifts his head to watch the man disappear into the night."
+    $renpy.music.set_volume(0.5, delay=0, channel='music')
     n "He reaches out his hand with a weak protest before collapsing."
     n "A vague sense of panic rises in him."
     n "The siren seems to fade as the escort’s outstretched hand finds a flat smooth circular object, something the man dropped during his escape."
     n "Before he can think too hard about what this could mean, the escort completely blacks out."
-
+    stop music fadeout 0.5
 #### Scene Two ####
     $no_box = False
     scene black with fade

@@ -429,7 +429,7 @@ screen main_menu():
         hotspot (1377, 682, 302, 67) action ShowMenu ("cg")
         hotspot (1374, 753, 190, 60) action Quit(confirm=not main_menu)
 
-    
+
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
 
@@ -765,94 +765,91 @@ screen file_slots(title):
 
         if renpy.get_screen("save"):
 
+
+
+
             imagemap:
                 ground "gui/save_idle.jpg"
                 idle "gui/save_idle.jpg"
                 hover "gui/save_hover.jpg"
                 selected_idle "gui/save_hover.jpg"
+                hotspot (550, 372, 242, 142):
+                    action FileAction(1)
+                    add FileScreenshot(1) xalign 0.5
 
-                imagemap:
-                    ground "gui/load_idle.jpg"
-                    idle "gui/load_idle.jpg"
-                    hover "gui/load_hover.jpg"
-                    selected_idle "gui/load_hover.jpg"
-                    hotspot (550, 372, 242, 142):
-                        action FileAction(1)
-                        add FileScreenshot(1) xalign 0.5
+                    text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
+                        style "slot_time_text"
+                        xalign 0.5
+                        ypos 170
 
-                        text FileTime(1, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
-                            style "slot_time_text"
-                            xalign 0.5
-                            ypos 170
+                    text FileSaveName(1):
+                        style "slot_name_text"
 
-                        text FileSaveName(1):
-                            style "slot_name_text"
+                    key "save_delete" action FileDelete(1)
 
-                        key "save_delete" action FileDelete(1)
+                hotspot (860, 372, 242, 142):
+                    action FileAction(2)
+                    add FileScreenshot(2) xalign 0.5
 
-                    hotspot (860, 372, 242, 142):
-                        action FileAction(2)
-                        add FileScreenshot(2) xalign 0.5
+                    text FileTime(2, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
+                        style "slot_time_text"
+                        xalign 0.5
+                        ypos 170
 
-                        text FileTime(2, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
-                            style "slot_time_text"
-                            xalign 0.5
-                            ypos 170
+                    text FileSaveName(2):
+                        style "slot_name_text"
 
-                        text FileSaveName(2):
-                            style "slot_name_text"
+                    key "save_delete" action FileDelete(2)
+                hotspot (1169, 372, 242, 142):
+                    action FileAction(3)
+                    add FileScreenshot(3) xalign 0.5
 
-                        key "save_delete" action FileDelete(2)
-                    hotspot (1169, 372, 242, 142):
-                        action FileAction(3)
-                        add FileScreenshot(3) xalign 0.5
+                    text FileTime(3, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
+                        style "slot_time_text"
+                        xalign 0.5
+                        ypos 170
 
-                        text FileTime(3, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
-                            style "slot_time_text"
-                            xalign 0.5
-                            ypos 170
+                    text FileSaveName(3):
+                        style "slot_name_text"
 
-                        text FileSaveName(3):
-                            style "slot_name_text"
+                    key "save_delete" action FileDelete(3)
+                hotspot (550, 605, 242, 142):
+                    action FileAction(4)
+                    add FileScreenshot(4) xalign 0.5
 
-                        key "save_delete" action FileDelete(3)
-                    hotspot (550, 605, 242, 142):
-                        action FileAction(4)
-                        add FileScreenshot(4) xalign 0.5
+                    text FileTime(4, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
+                        style "slot_time_text"
+                        xalign 0.5
+                        ypos 170
 
-                        text FileTime(4, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
-                            style "slot_time_text"
-                            xalign 0.5
-                            ypos 170
+                    text FileSaveName(4):
+                        style "slot_name_text"
 
-                        text FileSaveName(4):
-                            style "slot_name_text"
+                    key "save_delete" action FileDelete(4)
+                hotspot (860, 605, 241, 145):
+                    action FileAction(5)
+                    add FileScreenshot(5) xalign 0.5
 
-                        key "save_delete" action FileDelete(4)
-                    hotspot (860, 605, 241, 145):
-                        action FileAction(5)
-                        add FileScreenshot(5) xalign 0.5
+                    text FileTime(5, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
+                        style "slot_time_text"
+                        xalign 0.5
+                        ypos 170
 
-                        text FileTime(5, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
-                            style "slot_time_text"
-                            xalign 0.5
-                            ypos 170
+                    text FileSaveName(5):
+                        style "slot_name_text"
 
-                        text FileSaveName(5):
-                            style "slot_name_text"
+                    key "save_delete" action FileDelete(5)
+                hotspot (1168, 605, 242, 142):
+                    action FileAction(6)
+                    add FileScreenshot(6) xalign 0.5
 
-                        key "save_delete" action FileDelete(5)
-                    hotspot (1168, 605, 242, 142):
-                        action FileAction(6)
-                        add FileScreenshot(6) xalign 0.5
+                    text FileTime(6, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
+                        style "slot_time_text"
+                        xalign 0.5
+                        ypos 170
 
-                        text FileTime(6, format=_("{#file_time}%A, %B %d %Y, %H:%M"), empty=_("")):
-                            style "slot_time_text"
-                            xalign 0.5
-                            ypos 170
-
-                        text FileSaveName(6):
-                            style "slot_name_text"
+                    text FileSaveName(6):
+                        style "slot_name_text"
                 hotspot (658, 817, 40, 43) action FilePage(1)
                 hotspot (716, 813, 42, 47) action FilePage(2)
                 hotspot (782, 814, 42, 44) action FilePage(3)
